@@ -8,7 +8,7 @@ function MessageInput() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!message) return;
-    console.log(message);
+    // console.log(message);
     await sendMessage(message);
     setMessage("");
   };
@@ -18,10 +18,10 @@ function MessageInput() {
       <div className="w-full relative">
         <input
           type="text"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
           className="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 text-white"
           placeholder="send a message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <button
           type="submit"
